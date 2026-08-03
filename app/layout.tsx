@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./refinements.css";
 
 export const metadata: Metadata = {
   title: "Anmol Malviya — Product Engineer & Project Manager",
-  description: "A storytelling portfolio featuring product systems, engineering work, and project leadership.",
+  description: "A connected storytelling portfolio featuring product systems, engineering work, achievements, and project leadership.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
