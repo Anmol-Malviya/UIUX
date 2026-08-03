@@ -5,11 +5,16 @@ import { SectionHeading } from "./SectionHeading";
 export function Projects() {
   return (
     <section className="section shell" id="work">
-      <SectionHeading index="02" kicker="PRODUCT SYSTEMS" title="Products designed as living systems." description="Each product connects interface, intelligence, workflow, and measurable outcomes." />
-      <div className="projects-grid">
-        <ProjectCard project={projects[0]} featured />
-        <ProjectCard project={projects[1]} />
-        <ProjectCard project={projects[2]} featured />
+      <SectionHeading
+        index="02"
+        kicker="SELECTED SYSTEMS"
+        title="Real repositories. Real architecture. One connected story."
+        description="The portfolio now prioritizes the strongest evidence from the codebase: local AI, multi-tenant SaaS, developer tooling, and operations software."
+      />
+      <div className="projects-grid projects-grid--evidence">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.title} project={project} featured={index === 0 || index === 1} />
+        ))}
       </div>
     </section>
   );
